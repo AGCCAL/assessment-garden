@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+use Garden::CGIHandler;
+use Garden::Group;
+
+my $query = Garden::CGIHandler->new;
+
+my $group = Garden::Group->new(request => $query->request);
+my $response = $group->create_group_invitation;
+$query->send_response($response);

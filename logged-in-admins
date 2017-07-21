@@ -1,0 +1,55 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+use Garden::CGIHandler;
+use Garden;
+
+my $query = Garden::CGIHandler->new;
+my $garden = Garden->new(request => $query->request, 'decode-content'=>0);
+
+my $dbh = $garden->database;
+my $user_id = $garden->get_user_id_from_cookie();
+unless ($garden->user_id_is_an_admin($user_id))
+{
+  $user_id = undef;
+}
+
+unless (defined($user_id))
+{
+  $query->send_response($garden->redirect_via_login($garden->request->uri));
+}
+else
+{
+  my $sth = $dbh->prepare("select u.user_id, u.real_name from user u, group_member gm, user_group ug where ug.is_admin_group != 0 and ug.group_id = gm.group_id and gm.member_id = u.user_id and gm.member_type = 0 and ug.group_id = 0 and u.user_id != $user_id and u.last_seen >= (datetime('now', '-2 minutes'));");
+  $sth->execute;
+  
+  my @full_admin_ids;
+  my @full_admin_names;
+  
+  
+  while (my $row = $sth->fetch)
+  {
+    my ($user_id, $real_name) = @{$row};
+    push (@full_admin_ids, $user_id);
+    push (@full_admin_names, $real_name);
+  }
+  
+  $sth = $dbh->prepare("select u.real_name from user u, group_member gm, user_group ug where ug.is_admin_group != 0 and ug.group_id = gm.group_id and gm.member_id = u.user_id and gm.member_type = 0 and u.user_id not in (" . join (",",@full_admin_ids) . ") and u.user_id != $user_id and u.last_seen >= (datetime('now', '-2 minutes'));");
+  
+  my @group_admin_names;
+  while (my $row = $sth->fetch)
+  {
+    my ($real_name) = @{$row};
+    push (@group_admin_names, $real_name);
+  }
+  
+  my %hashy;
+  $hashy{"full_admins"} = \@full_admin_names;
+  $hashy{"group_admins"} = \@group_admin_names;
+  
+  my $response = $garden->success_response(%hashy);
+  
+  $query->send_response($response);
+  
+}
+

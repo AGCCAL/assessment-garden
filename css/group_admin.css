@@ -1,0 +1,289 @@
+
+
+.questionnaire-introduction
+{
+  padding:0.5cm;
+  margin:-0.5cm;
+  display:inline-block;
+  
+}
+
+.questionnaire-introduction h1
+{
+  display:inline-block;
+  margin:0;
+}
+
+.questionnaire-body
+{
+  margin-top:1cm;
+  
+}
+
+.question
+{
+  font-weight:bold;
+}
+
+.question-number
+{
+  display: inline;
+  float: left;
+  margin-right:0;
+}
+
+.question-number::after
+{
+  content: ". ";
+}
+
+.question-text
+{
+  display: inline;
+}
+
+.answer
+{
+  width:100%;
+  margin-bottom:1.5cm;
+  margin-top:0.5cm;
+}
+
+.answer-option-container
+{
+  width: 85px;
+  height:120px;
+  display:inline-block;
+  vertical-align:top;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.answer-option
+{
+  width:60px;
+  height:60px;
+  border-radius:32px;
+  margin-left:10px;
+  margin-right:10px;
+  
+  border:2px solid rgb(130,195,65);
+  vertical-align:top;
+  display:inline-block;
+  background:white;
+}
+
+.answer-option-text
+{
+  text-align:center;
+  width:85px;
+  height:60px;
+  margin-top:10px;
+  font-size:12px;
+  color: rgb(130,195,65);
+}
+
+
+.answer-option.over
+{
+  border:2px solid rgb(46,49,146);
+}
+
+.answer-option-text.over
+{
+  color:rgb(46,49,146);
+}
+
+.answer-option.selected
+{
+  background:rgb(243,112,33);
+  border:2px solid rgb(243,112,33);
+}
+
+.answer-option-text.selected
+{
+  color:rgb(243,112,33);
+}
+
+
+.qa
+{
+  border-top:1px solid rgb(99,100,102);
+}
+
+
+
+
+
+.questions-container
+{
+  width:100%;
+  height:550px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  border:1px solid rgb(243,112,33);
+
+}
+
+.question-header-row
+{
+  background-color: rgb(243,112,33);
+  color:white;
+  height:150px;
+  text-align: left;
+  vertical-align: bottom;
+  min-width:100%;
+}
+
+.question-header-question
+{
+  display:inline-block;
+  width:350px;
+  position: relative;
+  bottom: -127px;
+  left:10px;
+
+}
+
+.question-header-dimension-container
+{
+  display:inline-block;
+}
+
+.question-header-dimension
+{
+  display:inline-block;
+  width:41px;
+}
+
+.question-header-dimension-label
+{
+  display:inline-block;
+  width:500px;
+  height:20px;
+  overflow: hidden;
+  position: relative;
+  bottom: 112px;
+  left: -225px;
+  
+  -webkit-transform: rotate(-90deg); /* Safari and Chrome */
+  -moz-transform: rotate(-90deg);   /* Firefox */
+  -ms-transform: rotate(-90deg);   /* IE 9 */
+  -o-transform: rotate(-90deg);   /* Opera */
+  transform: rotate(-90deg);
+}
+
+.question-header-actions
+{
+  display:inline-block;
+  position: relative;
+  bottom: -127px;
+  left:10px;
+
+}
+
+
+.question-list-container
+{
+   overflow-y: scroll;   
+   height:400px;
+   min-width:100%;
+
+}
+
+.question-list-row
+{
+  height:85px;
+}
+
+.question-list-question
+{
+  display:inline-block;
+  width:350px;
+  padding-left: 5px;
+}
+
+input.question-list-question[type=text]
+{
+  width:310px;
+  left:20px;
+}
+
+.question-list-dimension-container
+{
+  display:inline-block;
+}
+
+.question-list-dimension
+{
+  display:inline-block;
+  height:85px;
+  width:40px;
+  border-left:1px solid rgb(243,112,33);
+  position: relative;
+  top: -40px;
+  padding-top:10px;
+}
+
+.question-list-actions
+{
+  display:inline-block;
+  height:85px;
+  border-left:1px solid rgb(243,112,33);
+  padding-left:5px;
+}
+
+.question-list-question-number
+{
+  display:inline-block;
+  height:85px;
+  position:relative;
+  top:-40px;
+  width:30px;
+  text-align: right;
+}
+
+.question-list-question-and-type
+{
+  display:inline-block;
+  height:85px;
+  position:relative;
+  top:0px;
+  padding-top:5px;
+}
+
+
+
+button.dimension
+{
+  width:30px;
+  height:30px;
+  margin:5px;
+  padding:0;
+}
+
+select.answer-type
+{
+  -webkit-appearance:button;
+  -moz-appearance:button;
+  appearance:button;
+  height:30px;
+  background:rgb(130,195,65);
+  background-image:none;
+  background-repeat:none;
+  border:0;
+  border-radius:5px;
+  color:white;
+  font-family: Montserrat, sans-serif;
+  font-size:15px;
+  margin-top:5px;
+  width:310px;
+  padding-left:15px;
+
+
+}
+
+select.answer-type:hover
+{
+  background:rgb(46,49,146);
+}

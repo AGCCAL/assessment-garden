@@ -1,0 +1,12 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+use Garden::CGIHandler;
+use Garden::Assessment;
+use Text::CSV;
+
+my $query = Garden::CGIHandler->new;
+
+my $assessment = Garden::Assessment->new(request => $query->request, 'decode-content'=>0);
+my $response = $assessment->export_assessment;
+$query->send_response($response);

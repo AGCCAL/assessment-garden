@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+use Garden::CGIHandler;
+use Garden::User;
+
+my $query = Garden::CGIHandler->new;
+
+my $user = Garden::User->new(request => $query->request, 'decode-content'=>0);
+my $response = $user->accept_tos;
+$query->send_response($response);

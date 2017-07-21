@@ -1,0 +1,162 @@
+
+table
+{
+  background: transparent;
+}
+
+td
+{
+  border:0;
+}
+
+td.heading
+{
+  text-align:right;
+}
+
+td.prompt
+{
+  color: rgb(243,112,33);
+  text-align:right;
+}
+
+td.input
+{
+  height:65px;
+}
+
+input.settings
+{
+  margin-left:10px;
+  padding-left:10px;
+}
+
+input[type=text]
+{
+  border:2px solid rgb(130,195,65);
+  height:40px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+input[type=password]
+{
+  border:2px solid rgb(130,195,65);
+  height:40px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+input[type=email]
+{
+  border:2px solid rgb(130,195,65);
+  height:40px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+input[type=number]
+{
+  border:2px solid rgb(130,195,65);
+  height:40px;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.settings-mask
+{
+  display:none;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:#eee;
+  margin:0;
+  padding:0;
+  opacity:0.8;
+  z-index:10;
+}
+
+.settings-settings
+{
+  display:none;
+  
+  border: 1px solid black;
+  background: white;
+  border-radius:5px;
+  
+  width:66.667%;
+  height:530px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding:10px;
+  margin: auto;
+  z-index:20;
+}
+
+
+td.cancel
+{
+  text-align:left;
+  font-size:12px;
+}
+
+td.update
+{
+  text-align:right;
+  font-size:12px;
+}
+
+button
+{
+  background:rgb(130,195,65);
+  border:0;
+  border-radius:5px;
+  color:white;
+  font-family: Montserrat, sans-serif;
+  font-size:15px;
+  height:40px;
+  width:120px;
+}
+
+.cancel button
+{
+  margin-left:10px;
+  padding-left:10px;
+}
+
+button:hover
+{
+  background:rgb(46,49,146);
+}
+
+.warning
+{
+  color:rgb(243,112,33);
+}
+
+.error
+{
+  color:red;
+}
+
+
+#settings
+{
+  text-decoration:none;
+  color: rgb(130,195,65);
+}
+
+#settings:hover
+{
+  color: rgb(46,49,146);
+}
+
+
+
+
+

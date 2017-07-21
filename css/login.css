@@ -1,0 +1,138 @@
+
+table
+{
+  background: transparent;
+}
+
+td
+{
+  border:0;
+}
+
+td.heading
+{
+  text-align:right;
+}
+
+td.prompt
+{
+  color: rgb(243,112,33);
+  text-align:right;
+}
+
+td.input
+{
+  height:65px;
+}
+
+input
+{
+  margin-left:10px;
+  padding-left:10px;
+}
+
+input[type=text]
+{
+  border:2px solid rgb(130,195,65);
+  height:40px;
+  width:100%;
+}
+
+input[type=password]
+{
+  border:2px solid rgb(130,195,65);
+  height:40px;
+  width:100%;
+}
+
+input[type=email]
+{
+  border:2px solid rgb(130,195,65);
+  height:40px;
+  width:100%;
+}
+
+input[type=number]
+{
+  border:2px solid rgb(130,195,65);
+  height:40px;
+  width:100%;
+}
+
+.login-login
+{
+  position:absolute;
+  top:220px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding:10px;
+  margin: auto;
+}
+
+.login-signup
+{
+  display:none;
+  position:absolute;
+  top:220px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding:10px;
+  margin: auto;
+}
+
+.login-forgot
+{
+  position:absolute;
+  top:220px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding:10px;
+  margin: auto;
+}
+
+
+td.remember
+{
+  text-align:left;
+  font-size:12px;
+}
+
+td.dont
+{
+  text-align:right;
+  font-size:12px;
+}
+
+
+.remember button
+{
+  margin-left:10px;
+  padding-left:10px;
+}
+
+
+#forgot
+{
+  text-decoration:none;
+  color: rgb(130,195,65);
+}
+
+#forgot:hover
+{
+  color: rgb(46,49,146);
+}
+
+
+
+
+.alert-alert
+{
+  width:400px;
+  height:240px;
+}
+
+
+

@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+use Garden::CGIHandler;
+use Garden::Assessment;
+
+my $query = Garden::CGIHandler->new;
+
+my $assessment = Garden::Assessment->new(request => $query->request);
+my $response = $assessment->email_assessment;
+$query->send_response($response);
